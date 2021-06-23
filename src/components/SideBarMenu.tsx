@@ -5,7 +5,7 @@ import { BiLogOutCircle } from "react-icons/bi";
 const SideBarMenu = () => {
   return (
     <div className="hidden sm:block">
-      <div className="sideBar flex flex-col items-center h-screen w-64">
+      <div className="sideBar flex flex-col items-center h-screen w-64 ">
         <img className="h-12 w-36 mt-5" src={logo} alt="imagen" />
         <img className="h-52 w-52 mt-9" src={avatar} alt="imagen" />
         <p>ASHK123</p>
