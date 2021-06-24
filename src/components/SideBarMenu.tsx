@@ -5,15 +5,16 @@ import { BiLogOutCircle } from "react-icons/bi";
 const SideBarMenu = () => {
   return (
     <div className="hidden sm:block">
-      <div className="sideBar flex flex-col items-center h-screen w-64 ">
-        <img className="h-12 w-36 mt-5" src={logo} alt="imagen" />
+      <div className="sideBar flex flex-col items-center sm:h-screen sm:w-80 w-screen h-12 ">
+        <img className="h-14 w-40 mt-5" src={logo} alt="imagen" />
         <img className="h-52 w-52 mt-9" src={avatar} alt="imagen" />
-        <p>ASHK123</p>
-        <p>Level 1</p>
-        <p>"Work hard on yout test"</p>
+        <p className="text-2xl mt-5">ASHK123</p>
+        <p className="text">Level 1</p>
+        <p className="text mt-6">"Work hard on yout test"</p>
         <div className="h-3/6 w-full"></div>
-        <button className="flex items-center justify-around w-44 bg-white bg-opacity-10 mb-5">
-          <BiLogOutCircle /> LOG OUT
+        <button className="flex items-center justify-between h-12 w-64 bg-white bg-opacity-10 mb-5 p-4">
+          <BiLogOutCircle size={28} /> LOG OUT
+          <div></div>
         </button>
       </div>
     </div>
