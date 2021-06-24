@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { getAllPokemon, getPokemon } from "./services/pokemon";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { Facebook as Loader } from "react-content-loader";
 
 function PokeApp() {
   const [pokemonData, setPokemonData] = useState([]);
@@ -73,9 +74,14 @@ function PokeApp() {
       </button>
 
       {loading ? (
-        <h1>LAOADING...</h1>
+        <div className="absolute top-1/4 left-1/4 h-40 border-2 border-pink-300 rounded-3xl bg-red-400 mr-20 mt-11 p-4">
+          <h1 className="text-2xl text-black">
+            Estamos capturando tus pokemons...
+          </h1>
+          <Loader />
+        </div>
       ) : (
-        <div className=" w-full overflow-y-auto grid gap-4 mt-28 mb-6 mx-7  sm:grid-cols-1 md:grid-cols-3">
+        <div className=" w-full overflow-y-auto grid gap-4 mt-28 mb-6 mx-7  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {pokemonData.map((pokemon: any, i: any) => {
             return <PokeCard key={i} pokemon={pokemon} />;
           })}

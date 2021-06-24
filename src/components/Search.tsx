@@ -2,7 +2,7 @@ import { BsSearch } from "react-icons/bs";
 
 const Search = () => {
   return (
-    <div className="absolute top-14 right-11 w-72 rounded-xl">
+    <div className="absolute top-14 right-8 w-72 rounded-xl mt-3">
       <form action="">
         <input
           type="text"
