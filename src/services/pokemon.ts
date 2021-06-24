@@ -1,4 +1,3 @@
-import { resolve } from "dns"
 
 export async function getAllPokemon(url:any){
     return new Promise((resolve, reject)=>{
@@ -16,6 +15,7 @@ export async function getPokemon(url:any){
             .then(res=> res.json())
             .then((data:any)=>{
                 resolve(data);
+                
             });
     });
 }
